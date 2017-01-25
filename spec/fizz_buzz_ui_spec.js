@@ -1,11 +1,11 @@
 describe('Partial sample', function() {
   beforeEach(function() {
     // We can load fixtures using this method:
-    //jasmine.getFixtures().clearCache();
-    //var f = jasmine.getFixtures();
-    //f.fixturesPath = 'base/spec/fixtures';
-    //f.load('sample_partial.html');
-    //$.holdReady(false);
+    // jasmine.getFixtures().clearCache();
+    // var f = jasmine.getFixtures();
+    // f.fixturesPath = 'base/spec/fixtures';
+    // f.load('sample_partial.html');
+    // $.holdReady(false);
 
     // Or this:
     jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
@@ -14,16 +14,21 @@ describe('Partial sample', function() {
   });
 
   afterEach(function() {
-    // If you need to reset some values after each testing
-    // you can do it here. 
+    $("#fizzBuzzInput").val(NaN);
   });
 
   describe("displays text", function() {
+    it("returns fizz", function(){
+      $("#fizzBuzzInput").val(3);
+      $("#fizzBuzzer").click();
+      expect($("#fizzBuzzOutput").text()).toEqual ("fizz");
+        });
+      });
 
-    it("when button is clicked", function() {
-      $('#text').val('Some random text...');
-      $('#click_me').trigger('click');
-      expect($('#display_message').text()).toBe('Some random text...');
+  describe("You should be able to press team1 button", function(){
+    it (" and give you your roll result", function(){
+      $("#team1roll").click();
+      expect($("#team1result").text()).toEqual (jasmine.any(String));
+        });
+      });
     });
-  });
-});

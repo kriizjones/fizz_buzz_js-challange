@@ -1,4 +1,9 @@
 describe("fizzBuzzer", function() {
+  var subject;
+
+  beforeEach(function() {
+    subject = new fizzBuzzer();
+  });
 
 it("should be one", function() {
   expect(fizzBuzzer(1)).toEqual(1);

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fizz Buzz</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <script src="assets/js/fizz_buzz.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/team.js"></script>
+    <script type="text/javascript">
+      $(document).ready(onReadyEvents);
+    </script>
+  </head>
+  <body class ="body">
+  <h1 class ="h1"><center>Roll the fizz buzz!</center></h1>
+  <div class="row">
+    <div class="medium-6 medium-centered large-4 large-centered columns">
+      <div class="row column Fizz_buzz">
+        <center><p>Team vs Team, try to splash the another team for points</p></center>
+        <center><input type="number" id="fizzBuzzInput" min="0" placeholder="Enter a number"></center>
+        <center><button class="button" id="fizzBuzzer">Check number for fizzbuzz!</button></center>
+        <center><button class="button" id="team1roll">team 1 roll</button></center>
+        <center><button class="button" id="team2roll">team 2 roll</button></center>
+    </div>
+  </div>
+</div>
+  <div><center>
+    <br><span id="fizzBuzzOutput"></span><br>
+    <br><span id="team1result"></span><br>
+    <br><span id="team2result"></span><br>
+  </center></div>
+</body>
+</html>

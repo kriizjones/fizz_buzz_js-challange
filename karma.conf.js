@@ -12,7 +12,7 @@ module.exports = function(config) {
       'assets/js/**/*.js',
       'spec/**/*_spec.js', {
         pattern: 'spec/fixtures/**/*.html',
-        included: false,
+        included: true,
         served: true
       }
     ],
@@ -86,8 +86,8 @@ module.exports = function(config) {
         flags: ['--no-sandbox']
       }
     }
-  })
+  });
   if (process.env.TRAVIS) {
     config.browsers = ['chromeTravisCI'];
   }
-}
+};
